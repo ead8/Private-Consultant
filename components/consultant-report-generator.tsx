@@ -32,6 +32,12 @@ import {
 } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
 
+/**
+ * Enhanced Consultant Report Generator component
+ * This component provides a user interface for generating AI-powered reports based on web content.
+ * It includes form inputs for URL, report type, and special instructions, as well as an editor for displaying and editing the generated report.
+ * @returns {JSX.Element} A React component that renders the report generator interface
+ */
 const EnhancedConsultantReportGenerator = () => {
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
