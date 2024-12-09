@@ -70,6 +70,15 @@ SelectScrollDownButton.displayName =
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
+/**
+ * Renders a customizable select content component using Radix UI primitives.
+ * @param {Object} props - The component props.
+ * @param {string} props.className - Additional CSS classes to apply to the content.
+ * @param {React.ReactNode} props.children - The child elements to render within the content.
+ * @param {string} [props.position="popper"] - The positioning strategy for the content.
+ * @param {React.Ref} ref - The ref to be forwarded to the content element.
+ * @returns {React.ReactElement} A styled and positioned select content component.
+ */
 >(({ className, children, position = "popper", ...props }, ref) => (
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content

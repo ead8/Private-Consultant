@@ -10,6 +10,12 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 })
 
+/**
+ * Processes a POST request to generate an HTML report based on scraped content and user instructions.
+ * @param {Request} request - The incoming HTTP request object containing JSON payload with url, instructions, reportType, and advancedAnalysis.
+ * @returns {Promise<NextResponse>} A promise that resolves to a NextResponse object containing the generated HTML report or an error message.
+ * @throws {Error} If no markdown content is found in the scrape result.
+ */
 export async function POST(request: Request) {
     try {
       const { 
