@@ -8,6 +8,13 @@ import { cn } from "@/lib/utils"
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
+/**
+ * Renders a customizable switch component using SwitchPrimitives.Root
+ * @param {Object} props - The properties passed to the component
+ * @param {string} [props.className] - Additional CSS class names for the switch
+ * @param {React.Ref} ref - Ref object for the switch component
+ * @returns {React.ReactElement} A switch component with customizable styling
+ */
 >(({ className, ...props }, ref) => (
   <SwitchPrimitives.Root
     className={cn(
