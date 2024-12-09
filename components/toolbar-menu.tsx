@@ -7,6 +7,12 @@ interface ToolbarMenuProps {
   editor: Editor | null
 }
 
+/**
+ * Renders a toolbar menu with formatting options for a rich text editor.
+ * @param {Object} props - The component props.
+ * @param {Object} props.editor - The editor instance to manipulate text formatting.
+ * @returns {React.ReactElement|null} A div containing formatting buttons or null if no editor is provided.
+ */
 const ToolbarMenu: React.FC<ToolbarMenuProps> = ({ editor }) => {
   if (!editor) {
     return null
